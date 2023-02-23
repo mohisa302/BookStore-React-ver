@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+.BookstoreCMS {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.panelbg {
+  display: flex;
+  width: 100%;
+  height: 5.938rem;
+  padding-left: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 5vw;
+  border-radius: 4px;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon {
+  padding: 5px;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 15vw;
+  border-radius: 50%;
+  border: solid 1px rgb(165, 162, 162);
+}

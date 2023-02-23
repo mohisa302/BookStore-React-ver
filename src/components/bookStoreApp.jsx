@@ -1,22 +1,20 @@
-// import Navbar from "./Navbar";
-// import {
-//   Routes, Route, BrowserRouter, Link,
-// } from 'react-router-dom';
-// import Books from './Books';
-// import Navbar from './Navbar';
-// import NotMatch from './NotMatch';
-/* <Route path="categories" element={<categories />} />
-<Route path="*" element={<NotMatch />} />
-<Route path="/" element={<Navbar />}>
-<Routes>
-<Route index element={<Books />} />
-</Routes>
-*/
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Books from './Books';
+import Categories from './Categories';
+import Navbar from './Navbar';
+import NotMatch from './NotMatch';
+import styles from '../styles/bookStoreApp.module.css';
+
 const BookStoreApp = () => (
-  <>
-    <div className="pageContainer">
-      kjkn
-    </div>
-  </>
+  <div className={styles.pageContainer}>
+    <Routes>
+      <Route path="/" element={<Navbar />}>
+        <Route path="/Books" element={<Books />} />
+        <Route path="/" element={<Navigate to="/Books" />} />
+        <Route path="/Categories" element={<Categories />} />
+        <Route path="*" element={<NotMatch />} />
+      </Route>
+    </Routes>
+  </div>
 );
 export default BookStoreApp;
