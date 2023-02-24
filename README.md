@@ -2,7 +2,7 @@
 
 <div>
 
-  <h1><b>Math Magicians</b></h1><br/><br/>
+  <h1><b>Book Store</b></h1><br/><br/>
 
 </div>
 
@@ -25,11 +25,11 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 Math Magicians <a name="about-project"></a>
+# 📖 Book Store <a name="about-project"></a>
 
-**Math Magicians**
+**Book Store**
 
-A simple calculator with React
+A bookstore website
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -45,13 +45,13 @@ A simple calculator with React
 ### Key Features <a name="key-features"></a>
 - **Calculate operations**
 
-  - The website that calculates some mathmathical operations
+  - The website that offers different kinds of books
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-[you can see the live demo through this link](https://mohisa302.github.io/MathMagicians/)
+not available
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,7 +85,7 @@ To clone this repository to your desired folder, follow the steps below:
 
 - Follow the steps below
 
-  - Visit this link "https://github.com/mohisa302/MathMagicians.git"
+  - Visit this link "https://github.com/mohisa302/BookStore-React-ver.git"
   - Click the green button labelled "code"
   - Select the "Open with GitHub Desktop" option
   - After the GitHub Desktop add opens, click the "clone repo" button
