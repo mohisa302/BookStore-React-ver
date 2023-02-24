@@ -1,4 +1,4 @@
-import styles from '../styles/Books.module.css';
+import styles from '../styles/Categories.module.css';
 
-const Categories = () => <div className={styles.BOOKS}>Categories</div>;
+const Categories = () => <button type="button" className={styles.checkBtn}>Check status</button>;
 export default Categories;
