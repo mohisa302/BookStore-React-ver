@@ -11,10 +11,6 @@
   color: #0290ff;
 }
 
-ul {
-  list-style-type: none;
-}
-
 .panelbg {
   display: flex;
   width: 100%;
@@ -35,7 +31,7 @@ a {
   padding: 5px;
   width: 2rem;
   height: 2rem;
-  margin-left: 15vw;
+  margin-left: 35rem;
   border-radius: 50%;
   border: solid 1px rgb(165, 162, 162);
 }

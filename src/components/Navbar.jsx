@@ -1,8 +1,7 @@
 import { Link, Outlet } from 'react-router-dom';
-import Books from './Books';
 import userIcon from '../images/usericon.png';
-import Categories from './Categories';
 import styles from '../styles/Navbar.module.css';
+import navbarstyles from '../styles/Books.module.css';
 
 const Navbar = () => (
   <>
@@ -11,13 +10,13 @@ const Navbar = () => (
         Bookstore CMS
       </div>
       <div>
-        <Link to="/Books">
-          <Books />
+        <Link className={navbarstyles.BOOKS} to="/Books">
+          Books
         </Link>
       </div>
       <div>
-        <Link to="/Categories">
-          <Categories />
+        <Link className={navbarstyles.BOOKS} to="/Categories">
+          Categories
         </Link>
       </div>
       <div>

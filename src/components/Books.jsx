@@ -1,4 +1,11 @@
-import styles from '../styles/Books.module.css';
+import Book from './Book';
+import Form from './Form';
 
-const Books = () => <div className={styles.BOOKS}>Books</div>;
+const Books = () => (
+  <>
+    <Book />
+    <Form />
+  </>
+);
+
 export default Books;
