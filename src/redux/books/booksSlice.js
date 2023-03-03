@@ -1,8 +1,29 @@
+import { v4 as uuidv4 } from 'uuid';
+
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 
 const initialState = {
-  books: [],
+  books: [
+    {
+      item_id: uuidv4(),
+      title: 'The Great Gatsby',
+      author: 'John Smith',
+      category: 'Fiction',
+    },
+    {
+      item_id: uuidv4(),
+      title: 'Anna Karenina',
+      author: 'Leo Tolstoy',
+      category: 'Fiction',
+    },
+    {
+      item_id: uuidv4(),
+      title: 'The Selfish Gene',
+      author: 'Richard Dawkins',
+      category: 'Nonfiction',
+    },
+  ],
 };
 
 export const removeBook = (id) => ({
@@ -10,15 +31,26 @@ export const removeBook = (id) => ({
   id,
 });
 
-export const addedBook = (book) => ({
+export const addBook = (book) => ({
   type: ADD_BOOK,
   book,
 });
 
 const bookReducer = (state = initialState, action) => {
-  if (action.type === 'ADD_BOOK') { return [...state, action.book]; }
-  if (action.type === 'REMOVE_BOOK') { return state.filter((book) => book.id !== action.id); }
+  if (action.type === ADD_BOOK) {
+    return {
+      ...state,
+      books: [...state.books, action.payload],
+    };
+  }
+  if (action.type === REMOVE_BOOK) {
+    return {
+      ...state,
+      books: state.books.filter((book) => book.item_id !== action.id),
+    };
+  }
+  // books: books.filter((book) => action.payload,
+  // state.cardItems = state.books.filter((item) => item.id !== itemId);
   return state;
 };
-
 export default bookReducer;
