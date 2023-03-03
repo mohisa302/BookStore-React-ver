@@ -38,19 +38,25 @@ export const addBook = (book) => ({
 
 const bookReducer = (state = initialState, action) => {
   if (action.type === ADD_BOOK) {
+    const newBook = {
+      item_id: uuidv4(),
+      title: action.book.booktitle,
+      author: action.book.author,
+    };
     return {
       ...state,
-      books: [...state.books, action.payload],
+      books: [...state.books, newBook],
     };
   }
+
   if (action.type === REMOVE_BOOK) {
+    console.log(state.books);
     return {
       ...state,
       books: state.books.filter((book) => book.item_id !== action.id),
     };
   }
-  // books: books.filter((book) => action.payload,
-  // state.cardItems = state.books.filter((item) => item.id !== itemId);
+
   return state;
 };
 export default bookReducer;

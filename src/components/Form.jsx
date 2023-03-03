@@ -1,5 +1,7 @@
+import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import styles from '../styles/Book.module.css';
+import { addBook } from '../redux/books/booksSlice';
 
 const Form = () => {
   const [state, setState] = useState({
@@ -7,15 +9,15 @@ const Form = () => {
     auther: '',
   });
 
+  const dispatch = useDispatch();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-  };
-
-  const handleClick = (e) => {
     setState({
       ...state,
       [e.target.name]: e.target.value,
     });
+    dispatch(addBook(state));
   };
 
   const handleChange = (e) => {
@@ -35,7 +37,7 @@ const Form = () => {
         <label htmlFor="auther">
           <input className={styles.formInput2} placeholder="Auther" name="auther" type="text" value={state.auther} onChange={handleChange} />
         </label>
-        <button type="button" className={styles.addBtn} onClick={handleClick}>Add book</button>
+        <button type="button" className={styles.addBtn} onClick={handleSubmit}>Add book</button>
       </form>
     </>
   );
