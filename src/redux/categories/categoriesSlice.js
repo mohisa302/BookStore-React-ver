@@ -4,13 +4,16 @@ const initialState = {
   status: [],
 };
 
-export const cateSlice = () => ({
+export const checkStatus = () => ({
   type: STATUS,
 });
 
 const categoriesReducer = (state = initialState, action) => {
-  if (action.type === 'STATUS') {
-    return [...state.categories, 'Under construction'];
+  if (action.type === STATUS) {
+    return {
+      ...state,
+      status: 'Under construction',
+    };
   }
   return state;
 };
