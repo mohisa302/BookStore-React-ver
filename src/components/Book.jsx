@@ -36,14 +36,16 @@ const Book = (book) => {
           </li>
           <li className={styles.option}>
             <button type="button">
-              <pre className={styles.SuzanneCollins}>Comments     |     </pre>
+              <pre className={styles.SuzanneCollins}>Comments</pre>
             </button>
+            <div className={styles.Line} />
             <button
               type="button"
               onClick={() => handleRemove(id)}
             >
-              <pre className={styles.SuzanneCollins}>Remove       |     </pre>
+              <pre className={styles.SuzanneCollins}>Remove</pre>
             </button>
+            <div className={styles.Line} />
             <button type="button">
               <pre className={styles.SuzanneCollins}>Edit</pre>
             </button>
@@ -59,6 +61,7 @@ const Book = (book) => {
               <span className={styles.percent}>50%</span>
               <span className={styles.complete}>Completed</span>
             </ul>
+            <div className={styles.Line2} />
             <ul className={styles.bookInfo2}>
               <li className={styles.chapter}>CURRENT CHAPTER</li>
               <li className={styles.currentChapter}>Chapter 3</li>

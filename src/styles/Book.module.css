@@ -35,7 +35,7 @@ button {
   display: flex;
   justify-content: space-between;
   height: 10.625rem;
-  margin: 2.313rem 3rem 1rem 1rem;
+  margin: 2.313rem 6.25rem 1rem 6.25rem;
   padding: 2rem 5rem 1.625rem 1.688rem;
   border-radius: 4px;
   border: solid 1px white;
@@ -47,7 +47,7 @@ button {
   height: 1.188rem;
   font-family: 'Roboto Slab', serif;
   font-size: 0.875rem;
-  font-weight: 300;
+  font-weight: 100;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
@@ -117,10 +117,14 @@ pre {
   background-color: white;
 }
 
+button {
+  background: none;
+}
+
 .addBtn {
   width: 11.5rem;
   height: 2.813rem;
-  margin: 1.188rem -2rem 0 1rem;
+  margin: 1.188rem 1.25rem 0 1rem;
   padding: 0.801rem 1.188rem 0.886rem 1.375rem;
   border-radius: 3px;
   background-color: var(--azure);
@@ -128,7 +132,16 @@ pre {
 }
 
 .Formtitle {
-  margin: 1.188rem 2.125rem 0 6.25rem;
+  height: 1.5rem;
+  margin: 1.813rem 32.75rem 1.188rem 6.25rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
 }
 
 .formInput {
@@ -207,7 +220,14 @@ pre {
 
 .Line {
   width: 0.125rem;
+  height: 1.5rem;
+  margin: 0 1.063rem 0 0.938rem;
+  border: solid 1px #e8e8e8;
+}
+
+.Line2 {
+  width: 0.125rem;
   height: 4.375rem;
-  margin: 1.125rem 3.688rem 0 4.938rem;
-  border: solid 1px var(--white);
+  margin: 1.125rem 3rem 0 1.5rem;
+  border: solid 1px #e8e8e8;
 }
