@@ -1,7 +1,7 @@
 const STATUS = 'STATUS';
 
 const initialState = {
-  status: [],
+  status: '',
 };
 
 export const checkStatus = () => ({
@@ -10,6 +10,7 @@ export const checkStatus = () => ({
 
 const categoriesReducer = (state = initialState, action) => {
   if (action.type === STATUS) {
+    console.log(state.status);
     return {
       ...state,
       status: 'Under construction',

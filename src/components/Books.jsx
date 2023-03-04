@@ -4,7 +4,6 @@ import Form from './Form';
 import styles from '../styles/Books.module.css';
 
 const Books = () => {
-  // const dispatch = useDispatch();
   const { books } = useSelector((state) => state.books);
   return (
     <>
