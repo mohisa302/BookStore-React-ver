@@ -10,7 +10,6 @@ export const checkStatus = () => ({
 
 const categoriesReducer = (state = initialState, action) => {
   if (action.type === STATUS) {
-    console.log(state.status);
     return {
       ...state,
       status: 'Under construction',

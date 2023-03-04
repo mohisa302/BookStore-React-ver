@@ -14,13 +14,11 @@ const Book = (book) => {
   } = book;
 
   const handleRemove = async (id) => {
-    console.log(id);
-    const data = await dispatch(
+    dispatch(
       asyncRemove({
         item_id: id,
       }),
     );
-    console.log(data);
   };
   return (
     <>
