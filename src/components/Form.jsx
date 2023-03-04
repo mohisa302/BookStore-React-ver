@@ -39,6 +39,7 @@ const Form = () => {
 
   return (
     <>
+      <div className={styles.Line3} />
       <h3 className={styles.Formtitle}>
         ADD NEW BOOK
       </h3>

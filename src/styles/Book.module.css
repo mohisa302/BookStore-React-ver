@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
 
-button {
-  border: none;
-}
-
 .genreText {
   height: 1.125rem;
   margin: 0 2.438rem 0 0;
@@ -119,6 +115,7 @@ pre {
 
 button {
   background: none;
+  border: none;
 }
 
 .addBtn {
@@ -229,5 +226,12 @@ button {
   width: 0.125rem;
   height: 4.375rem;
   margin: 1.125rem 3rem 0 1.5rem;
+  border: solid 1px #e8e8e8;
+}
+
+.Line3 {
+  width: 75rem;
+  height: 0.125rem;
+  margin: 2.5rem 0.063rem 1.813rem 6.25rem;
   border: solid 1px #e8e8e8;
 }
