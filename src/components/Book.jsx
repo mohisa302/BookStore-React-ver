@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import styles from '../styles/Book.module.css';
 import progIcon from '../images/progress.jpg';
-import { removeBook } from '../redux/books/booksSlice';
+import { asyncRemove } from '../redux/api/apiSlice';
 
 const Book = (book) => {
   const dispatch = useDispatch();
@@ -13,6 +13,15 @@ const Book = (book) => {
     id,
   } = book;
 
+  const handleRemove = async (id) => {
+    console.log(id);
+    const data = await dispatch(
+      asyncRemove({
+        item_id: id,
+      }),
+    );
+    console.log(data);
+  };
   return (
     <>
       <div className={styles.LessonPanel}>
@@ -32,7 +41,7 @@ const Book = (book) => {
             </button>
             <button
               type="button"
-              onClick={() => dispatch(removeBook(id))}
+              onClick={() => handleRemove(id)}
             >
               <pre className={styles.SuzanneCollins}>Remove       |     </pre>
             </button>

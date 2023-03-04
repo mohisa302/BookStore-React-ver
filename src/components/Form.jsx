@@ -1,12 +1,14 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import styles from '../styles/Book.module.css';
-import { addBook } from '../redux/books/booksSlice';
+import { asyncCreate } from '../redux/api/apiSlice';
 
 const Form = () => {
   const [state, setState] = useState({
     booktitle: '',
     auther: '',
+    category: '',
   });
 
   const dispatch = useDispatch();
@@ -17,7 +19,15 @@ const Form = () => {
       ...state,
       [e.target.name]: e.target.value,
     });
-    dispatch(addBook(state));
+
+    dispatch(
+      asyncCreate({
+        item_id: uuidv4().replaceAll('-', ''),
+        title: state.booktitle,
+        author: state.auther,
+        category: '',
+      }),
+    );
   };
 
   const handleChange = (e) => {
