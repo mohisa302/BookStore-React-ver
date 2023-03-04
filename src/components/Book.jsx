@@ -1,9 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { CircularProgressbar } from 'react-circular-progressbar';
-// import progIcon from '../images/progress.jpg';
-import { removeBook } from '../redux/books/booksSlice';
 import 'react-circular-progressbar/dist/styles.css';
 import styles from '../styles/Book.module.css';
+import { asyncRemove } from '../redux/api/apiSlice';
 
 const Book = (book) => {
   const dispatch = useDispatch();
@@ -15,6 +14,13 @@ const Book = (book) => {
     id,
   } = book;
 
+  const handleRemove = async (id) => {
+    dispatch(
+      asyncRemove({
+        item_id: id,
+      }),
+    );
+  };
   return (
     <>
       <div className={styles.LessonPanel}>
@@ -34,7 +40,7 @@ const Book = (book) => {
             </button>
             <button
               type="button"
-              onClick={() => dispatch(removeBook(id))}
+              onClick={() => handleRemove(id)}
             >
               <pre className={styles.SuzanneCollins}>Remove       |     </pre>
             </button>
