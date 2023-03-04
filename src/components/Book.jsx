@@ -1,11 +1,12 @@
 import { useDispatch } from 'react-redux';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import styles from '../styles/Book.module.css';
-import progIcon from '../images/progress.jpg';
 import { asyncRemove } from '../redux/api/apiSlice';
 
 const Book = (book) => {
   const dispatch = useDispatch();
-
+  const percentage = 66;
   const {
     category,
     title,
@@ -35,14 +36,16 @@ const Book = (book) => {
           </li>
           <li className={styles.option}>
             <button type="button">
-              <pre className={styles.SuzanneCollins}>Comments     |     </pre>
+              <pre className={styles.SuzanneCollins}>Comments</pre>
             </button>
+            <div className={styles.Line} />
             <button
               type="button"
               onClick={() => handleRemove(id)}
             >
-              <pre className={styles.SuzanneCollins}>Remove       |     </pre>
+              <pre className={styles.SuzanneCollins}>Remove</pre>
             </button>
+            <div className={styles.Line} />
             <button type="button">
               <pre className={styles.SuzanneCollins}>Edit</pre>
             </button>
@@ -50,19 +53,23 @@ const Book = (book) => {
         </ul>
         <div className={styles.progcontainer}>
           <div className={styles.progress}>
-            <img className={styles.oval2} src={progIcon} alt="progress icon" />
+            <CircularProgressbar
+              value={percentage}
+              className={styles.wrec}
+            />
             <ul className={styles.progressTest}>
-              <span>{title}</span>
-              <span>Completed</span>
+              <span className={styles.percent}>50%</span>
+              <span className={styles.complete}>Completed</span>
+            </ul>
+            <div className={styles.Line2} />
+            <ul className={styles.bookInfo2}>
+              <li className={styles.chapter}>CURRENT CHAPTER</li>
+              <li className={styles.currentChapter}>Chapter 3</li>
+              <li>
+                <button className={styles.updateBtn} type="button">UPDATE PROGRESS</button>
+              </li>
             </ul>
           </div>
-          <ul className={styles.bookInfo2}>
-            <li className={styles.chapter}>CURRENT CHAPTER</li>
-            <li>Chapter 3</li>
-            <li>
-              <button className={styles.updateBtn} type="button">UPDATE PROGRESS</button>
-            </li>
-          </ul>
         </div>
       </div>
     </>
