@@ -1,11 +1,13 @@
 import { useDispatch } from 'react-redux';
-import styles from '../styles/Book.module.css';
-import progIcon from '../images/progress.jpg';
+import { CircularProgressbar } from 'react-circular-progressbar';
+// import progIcon from '../images/progress.jpg';
 import { removeBook } from '../redux/books/booksSlice';
+import 'react-circular-progressbar/dist/styles.css';
+import styles from '../styles/Book.module.css';
 
 const Book = (book) => {
   const dispatch = useDispatch();
-
+  const percentage = 66;
   const {
     category,
     title,
@@ -43,19 +45,22 @@ const Book = (book) => {
         </ul>
         <div className={styles.progcontainer}>
           <div className={styles.progress}>
-            <img className={styles.oval2} src={progIcon} alt="progress icon" />
+            <CircularProgressbar
+              value={percentage}
+              className={styles.wrec}
+            />
             <ul className={styles.progressTest}>
-              <span>{title}</span>
-              <span>Completed</span>
+              <span className={styles.percent}>50%</span>
+              <span className={styles.complete}>Completed</span>
+            </ul>
+            <ul className={styles.bookInfo2}>
+              <li className={styles.chapter}>CURRENT CHAPTER</li>
+              <li className={styles.currentChapter}>Chapter 3</li>
+              <li>
+                <button className={styles.updateBtn} type="button">UPDATE PROGRESS</button>
+              </li>
             </ul>
           </div>
-          <ul className={styles.bookInfo2}>
-            <li className={styles.chapter}>CURRENT CHAPTER</li>
-            <li>Chapter 3</li>
-            <li>
-              <button className={styles.updateBtn} type="button">UPDATE PROGRESS</button>
-            </li>
-          </ul>
         </div>
       </div>
     </>
