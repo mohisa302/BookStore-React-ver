@@ -1,32 +1,23 @@
-import { v4 as uuidv4 } from 'uuid';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 import Form from './Form';
+import styles from '../styles/Books.module.css';
 
 const Books = () => {
-  const books = [
-    {
-      title: 'Book 1',
-      auther: 'aut 1',
-      genre: 'Action',
-      id: uuidv4(),
-    },
-    {
-      title: 'Book 2',
-      auther: 'aut 2',
-      genre: 'Action',
-      id: uuidv4(),
-    },
-    {
-      title: 'Book 3',
-      auther: 'aut 3',
-      genre: 'Action',
-      id: uuidv4(),
-    },
-  ];
-
+  const { books } = useSelector((state) => state.books);
   return (
     <>
-      <Book key={books.id} bookProps={books} />
+      <div className={styles.bookContainer}>
+        {books.map((book) => (
+          <Book
+            key={book.item_id}
+            id={book.item_id}
+            category={book.category}
+            title={book.title}
+            author={book.author}
+          />
+        ))}
+      </div>
       <Form />
     </>
   );
