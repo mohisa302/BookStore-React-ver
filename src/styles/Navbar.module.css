@@ -9,6 +9,7 @@
   line-height: normal;
   letter-spacing: normal;
   color: #0290ff;
+  white-space: nowrap;
 }
 
 .panelbg {
@@ -29,7 +30,7 @@ a {
 .icon {
   padding: 5px;
   width: 2rem;
-  margin-left: 60rem;
+  margin-left: 80rem;
   height: 2rem;
   border-radius: 50%;
   border: solid 1px rgb(165, 162, 162);

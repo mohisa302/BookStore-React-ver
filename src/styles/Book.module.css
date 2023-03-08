@@ -76,7 +76,7 @@
 }
 
 .updateBtn {
-  width: 11.5rem;
+  width: 11rem;
   height: 2.063rem;
   margin: 0.75rem 0 0.563rem 3.688rem;
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;
@@ -119,13 +119,20 @@ button {
 }
 
 .addBtn {
-  width: 11.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: auto;
+  font-size: medium;
+  width: 3rem;
   height: 2.813rem;
   margin: 1.188rem 1.25rem 0 1rem;
-  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  padding: 0.801rem 2rem 0.886rem 1.375rem;
   border-radius: 3px;
   background-color: var(--azure);
   color: white;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .Formtitle {
@@ -142,17 +149,17 @@ button {
 }
 
 .formInput {
-  width: 41.5rem;
+  width: 60rem;
   height: 2.813rem;
   margin: 1.188rem 2.125rem 0 6.25rem;
-  padding: 0.813rem 35.688rem 0.813rem 1.063rem;
+  padding: 0.813rem 20rem 0.813rem 1.063rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
 }
 
 .formInput2 {
-  width: 17.813rem;
+  width: 35rem;
   height: 2.813rem;
   margin: 1.188rem 2.125rem 0;
   padding: 0.375rem 0.938rem 0.563rem 1rem;
@@ -165,6 +172,7 @@ button {
   display: flex;
   justify-content: space-between;
   margin-right: 6.18rem;
+  flex-wrap: wrap;
 }
 
 .percent {
@@ -230,7 +238,7 @@ button {
 }
 
 .Line3 {
-  width: 75rem;
+  width: 77vw;
   height: 0.125rem;
   margin: 2.5rem 0.063rem 1.813rem 6.25rem;
   border: solid 1px #e8e8e8;
