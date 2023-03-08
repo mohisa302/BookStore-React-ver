@@ -172,7 +172,6 @@ button {
   display: flex;
   justify-content: space-between;
   margin-right: 6.18rem;
-  flex-wrap: wrap;
 }
 
 .percent {
